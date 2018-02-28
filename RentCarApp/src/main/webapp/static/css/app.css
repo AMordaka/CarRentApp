@@ -84,3 +84,8 @@ body, #mainWrapper, .form-control{
 .authbar{
 	margin-bottom:15px;
 }
+
+#lang{
+    text-align: right;
+    margin-right: 2%;
+}
