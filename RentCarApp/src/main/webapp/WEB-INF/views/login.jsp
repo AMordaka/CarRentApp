@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -14,7 +14,7 @@
 
 	<body>
 		<div id="mainWrapper">
-            <div id="lang">
+            <div class="lang">
                 <a href="${pageContext.request.contextPath}/login?lang=pl"><img src="/static/img/pl.png"></a>
                 <a href="${pageContext.request.contextPath}/login?lang=en"><img src="/static/img/en.png"></a>
             </div>

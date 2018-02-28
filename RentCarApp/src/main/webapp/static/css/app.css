@@ -37,7 +37,7 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
 
 .generic-container {
   position:fixed;
-  width:80%;
+  width:98%;
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -85,7 +85,8 @@ body, #mainWrapper, .form-control{
 	margin-bottom:15px;
 }
 
-#lang{
+.lang{
     text-align: right;
-    margin-right: 2%;
+    margin-right:10px;
+    margin-top: 10px;
 }
