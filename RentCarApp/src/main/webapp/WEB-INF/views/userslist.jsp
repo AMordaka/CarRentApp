@@ -18,8 +18,9 @@
             <a href="${pageContext.request.contextPath}/list?lang=pl"><img src="/static/img/pl.png"></a>
             <a href="${pageContext.request.contextPath}/list?lang=en"><img src="/static/img/en.png"></a>
         </div>
-		<%@include file="authheader.jsp" %>
+
 		<div class="panel panel-default">
+            <%@include file="authheader.jsp" %>
 			  <!-- Default panel contents -->
 		  	<div class="panel-heading"><span class="lead"><spring:message code="list.of.users"/></span></div>
 			<table class="table table-hover">

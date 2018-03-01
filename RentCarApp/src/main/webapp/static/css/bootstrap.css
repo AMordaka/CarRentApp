@@ -3717,6 +3717,15 @@ tbody.collapse.in {
   width: 100%;
   margin-bottom: 0;
 }
+
+.input-group .form-control-header {
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: 15%;
+    margin-bottom: 0;
+}
+
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {

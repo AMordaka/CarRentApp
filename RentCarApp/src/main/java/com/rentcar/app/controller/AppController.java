@@ -54,7 +54,7 @@ public class AppController {
 	/**
 	 * This method will list all existing users.
 	 */
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
 
 		List<User> users = userService.findAllUsers();
@@ -185,7 +185,7 @@ public class AppController {
 		if (isCurrentAuthenticationAnonymous()) {
 			return "login";
 	    } else {
-	    	return "redirect:/list";  
+	    	return "redirect:/homepage";
 	    }
 	}
 
@@ -201,7 +201,7 @@ public class AppController {
 			persistentTokenBasedRememberMeServices.logout(request, response, auth);
 			SecurityContextHolder.getContext().setAuthentication(null);
 		}
-		return "redirect:/login?logout";
+		return "redirect:/homepage?logout";
 	}
 
 	/**
@@ -227,5 +227,18 @@ public class AppController {
 	    return authenticationTrustResolver.isAnonymous(authentication);
 	}
 
+
+
+    @RequestMapping(value="/cars", method = RequestMethod.GET)
+    public String carsPage (ModelMap model){
+        model.addAttribute("loggedinuser", getPrincipal());
+	    return "cars";
+    }
+
+    @RequestMapping(value={ "/", "/homepage"}, method = RequestMethod.GET)
+    public String homePage (ModelMap model){
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "homepage";
+    }
 
 }

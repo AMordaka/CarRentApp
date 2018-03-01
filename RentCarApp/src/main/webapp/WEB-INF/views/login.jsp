@@ -49,8 +49,8 @@
 							<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
 							<div class="form-actions">
-								<input type="submit"
-									class="btn btn-block btn-primary btn-default" value="<spring:message code="log.in"/>">
+								<input type="submit" class="btn btn-primary" value="<spring:message code="log.in"/>">
+                                <a class="btn btn-primary" href="<c:url value='/newuser' />"><spring:message code="register"/></a>
 							</div>
 						</form>
 					</div>
