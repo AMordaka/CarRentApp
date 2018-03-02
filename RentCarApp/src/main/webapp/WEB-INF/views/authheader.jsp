@@ -1,7 +1,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <div class="authbar">
-    <div class="login-container-small">
+    <div class="header">
+    </div>
+    <div class="login-container-small" >
         <div class="login-card">
             <div class="login-form">
                 <sec:authorize access="hasAnyRole('ADMIN', 'USER', 'DEALER') ">

@@ -72,6 +72,7 @@ body, #mainWrapper, .form-control{
     position: absolute;
 }
 .login-container-small {
+    display: inline-block;
     margin-top: 15px;
     margin-right: 15px;
     width: 20%;
@@ -96,4 +97,11 @@ body, #mainWrapper, .form-control{
     text-align: right;
     margin-right:10px;
     margin-top: 10px;
+}
+
+.header{
+    background-color: #4cae4c;
+    display: inline-block;
+    height: 10%;
+    width: auto;
 }

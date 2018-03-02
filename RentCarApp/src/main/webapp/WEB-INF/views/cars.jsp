@@ -14,6 +14,10 @@
 
 <body>
 <div class="generic-container">
+    <div class="lang">
+        <a href="${pageContext.request.contextPath}/cars?lang=pl"><img src="/static/img/pl.png"></a>
+        <a href="${pageContext.request.contextPath}/cars?lang=en"><img src="/static/img/en.png"></a>
+    </div>
     <div class="panel panel-default">
         <%@include file="authheader.jsp" %>
 
