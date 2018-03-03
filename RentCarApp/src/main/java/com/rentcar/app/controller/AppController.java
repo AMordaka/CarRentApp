@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.rentcar.app.model.User;
 import com.rentcar.app.model.UserProfile;
 import com.rentcar.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,4 +68,17 @@ public class AppController {
         return "homepage";
     }
 
+    @RequestMapping(value={"/about"}, method = RequestMethod.GET)
+    public String aboutPage (ModelMap model){
+        model.addAttribute("loggedinuser", userService.getPrincipal());
+        return "about";
+    }
+
+    @RequestMapping(value={"/userpanel"}, method = RequestMethod.GET)
+    public String userPanelPage (ModelMap model){
+        User user = userService.findBySSO(userService.getPrincipal());
+        model.addAttribute("loggedinuser", userService.getPrincipal());
+        model.addAttribute("user", user);
+        return "userpanel";
+    }
 }

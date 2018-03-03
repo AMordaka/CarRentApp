@@ -42,7 +42,7 @@
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown"><spring:message code="about.us"/></h2>
+                <h2 class="section-title text-center wow fadeInDown"><spring:message code="offer.short"/></h2>
                 <p class="text-center wow fadeInDown"><spring:message code="about.us.more"/> </p>
             </div>
 

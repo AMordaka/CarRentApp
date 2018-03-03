@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="webthemez">
-    <title>Rolls Car Rental Bootstrap Website Template - WebThemez</title>
+    <title>Rolls Car Rental</title>
     <!-- core CSS -->
     <link href="<c:url value='/static/css/bootstrap.min.css' />" rel="stylesheet">
     <link href="<c:url value='/static/css/animate.min.css' />" rel="stylesheet">
@@ -26,6 +26,5 @@
     <script src="/static/js/html5shiv.js"></script>
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/static/images/ico/favicon.ico">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
 </head>
