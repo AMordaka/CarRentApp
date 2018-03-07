@@ -8,8 +8,7 @@
 <section id="about">
     <div class="container">
         <div class="panel panel-default">
-            <%@include file="authheader.jsp" %>
-            <!-- Default panel contents -->
+            <%@include file="searchuser.jsp" %>
             <div class="panel-heading"><span class="lead"><spring:message code="list.of.users"/></span></div>
             <table class="table table-hover">
                 <thead>
@@ -24,7 +23,6 @@
                     <sec:authorize access="hasRole('ADMIN')">
                         <th width="100"></th>
                     </sec:authorize>
-
                 </tr>
                 </thead>
                 <tbody>

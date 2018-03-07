@@ -13,8 +13,10 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -100,11 +102,15 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/list" }, method = RequestMethod.GET)
-    public String listUsers(ModelMap model) {
+    public String listUsers(@RequestParam(value = "login", required = false) String login, ModelMap model) {
 
-        List<User> users = userService.findAllUsers();
-        model.addAttribute("users", users);
-        model.addAttribute("loggedinuser", userService.getPrincipal());
+        if(login != null) {
+            model.addAttribute("finduser", userService.findBySSO(login));
+        }
+            List<User> users = userService.findAllUsers();
+            model.addAttribute("users", users);
+            model.addAttribute("loggedinuser", userService.getPrincipal());
         return "userslist";
     }
+
 }

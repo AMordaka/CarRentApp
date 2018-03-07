@@ -105,3 +105,12 @@ body, #mainWrapper, .form-control{
     height: 10%;
     width: auto;
 }
+
+.custom-input{
+height: 40px;
+width: 200px;
+    padding: 1px;
+}
+.searcher-form{
+    margin-left: 10px;
+}
