@@ -6,10 +6,11 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name="APP_USER")
+@Table(name="USER")
 public class User implements Serializable{
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -22,7 +23,7 @@ public class User implements Serializable{
 	@NotEmpty
 	@Column(name="PASSWORD", nullable=false)
 	private String password;
-		
+
 	@NotEmpty
 	@Column(name="FIRST_NAME", nullable=false)
 	private String firstName;
@@ -32,22 +33,22 @@ public class User implements Serializable{
 	private String lastName;
 
 	@NotEmpty
+    @Email
 	@Column(name="EMAIL", nullable=false)
 	private String email;
 
 	@NotEmpty
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "APP_USER_USER_PROFILE",
+	@JoinTable(name = "USERS_PROFILES",
              joinColumns = { @JoinColumn(name = "USER_ID") },
              inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
-	private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
+	private Set<UserProfile> userProfiles = new HashSet<>();
 
-    @NotEmpty
-    @ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(name = "CAR_HAS_APP_USER",
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "RESERVATION",
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "CAR_ID") })
-    private Set<Car> cars = new HashSet<Car>();
+    private Set<Car> cars = new HashSet<>();
 
 	public Integer getId() {
 		return id;
@@ -97,13 +98,13 @@ public class User implements Serializable{
 		this.email = email;
 	}
 
-	public Set<UserProfile> getUserProfiles() {
-		return userProfiles;
-	}
+    public Set<UserProfile> getUserProfiles() {
+        return userProfiles;
+    }
 
-	public void setUserProfiles(Set<UserProfile> userProfiles) {
-		this.userProfiles = userProfiles;
-	}
+    public void setUserProfiles(Set<UserProfile> userProfiles) {
+        this.userProfiles = userProfiles;
+    }
 
     public Set<Car> getCars() {
         return cars;
@@ -155,6 +156,4 @@ public class User implements Serializable{
 				+ ", email=" + email + "]";
 	}
 
-
-	
 }

@@ -70,9 +70,10 @@ public class UserController {
     }
 
     @RequestMapping(value = { "/delete-user-{ssoId}" }, method = RequestMethod.GET)
-    public String deleteUser(@PathVariable String ssoId) {
+    public String deleteUser(@PathVariable String ssoId, ModelMap model) {
         userService.deleteUserBySSO(ssoId);
-        return "redirect:/list";
+        model.addAttribute("success", "User deleted successfully");
+        return "registrationsuccess";
     }
 
 
@@ -97,7 +98,6 @@ public class UserController {
 
         model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " registered successfully");
         model.addAttribute("loggedinuser", userService.getPrincipal());
-        //return "success";
         return "registrationsuccess";
     }
 
