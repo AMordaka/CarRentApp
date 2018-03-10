@@ -2,17 +2,11 @@ package com.rentcar.app.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.rentcar.app.model.User;
 import com.rentcar.app.model.UserProfile;
 import com.rentcar.app.service.CarService;
 import com.rentcar.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -62,7 +56,7 @@ public class AppController {
     @RequestMapping(value="/cars", method = RequestMethod.GET)
     public String carsPage (ModelMap model){
         model.addAttribute("loggedinuser", userService.getPrincipal());
-        model.addAttribute("cars", carService.findAllUsers());
+        model.addAttribute("cars", carService.findAllCars());
 	    return "cars";
     }
 
