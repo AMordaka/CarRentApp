@@ -43,11 +43,6 @@
                 </tbody>
             </table>
         </div>
-        <sec:authorize access="hasRole('ADMIN')">
-            <div class="well">
-                <a class="btn btn-primary" href="<c:url value='/newuser' />"><spring:message code="add.new.user"/></a>
-            </div>
-        </sec:authorize>
     </div>
 </section><!--/#about-->
 <%@include file="footer.jsp" %>

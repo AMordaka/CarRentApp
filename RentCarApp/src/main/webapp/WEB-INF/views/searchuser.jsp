@@ -4,7 +4,11 @@
         <form form:action="@{/list}" method="get">
             <input type="text" placeholder="<spring:message code="enter.login"/>" class="custom-input" name="login" id="login" form:value="${login}"/>
             <input type="submit" class="btn btn-primary" value="<spring:message code="search.user"/>">
+            <sec:authorize access="hasRole('ADMIN')">
+                <a class="btn btn-primary" href="<c:url value='/newuser' />"><spring:message code="add.new.user"/></a>
+            </sec:authorize>
         </form>
+
     </div>
     <div>
         <c:if test="${not empty finduser}">
