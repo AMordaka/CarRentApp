@@ -1,5 +1,6 @@
 package com.rentcar.app.configuration;
 
+import com.rentcar.app.converter.CarToCarTypeConverter;
 import com.rentcar.app.converter.RoleToUserProfileConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -25,6 +26,9 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 	
 	@Autowired
     RoleToUserProfileConverter roleToUserProfileConverter;
+
+	@Autowired
+    CarToCarTypeConverter carToCarTypeConverter;
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -66,6 +70,7 @@ public class AppConfig extends WebMvcConfigurerAdapter{
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(roleToUserProfileConverter);
+        registry.addConverter(carToCarTypeConverter);
     }
 	
 
