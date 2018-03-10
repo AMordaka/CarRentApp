@@ -7,36 +7,43 @@
 </div>
 <section id="about">
     <div class="container">
+        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
+            <a class="btn btn-primary" href="<c:url value='/newcar' />"><spring:message code="register.car"/></a>
+        </sec:authorize>
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading"><span class="lead"><spring:message code="list.of.cars"/></span></div>
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>jaja</th>
-                    <th><spring:message code="reg.no"/></th>
+                    <th><spring:message code="mark"/></th>
+                    <th><spring:message code="model"/></th>
                     <th><spring:message code="year"/></th>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <th width="100"></th>
-                    </sec:authorize>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <th width="100"></th>
-                    </sec:authorize>
+                    <th><spring:message code="reg.no"/></th>
+                    <th width="100"></th>
+
 
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach items="${cars}" var="car">
+                    <c:if test="${car.available == true}">
                     <tr>
-                        <td>${car.regNo}</td>
+                        <td>${car.carType.mark}</td>
+                        <td>${car.carType.model}</td>
                         <td>${car.year}</td>
-                        <sec:authorize access="hasRole('ADMIN')">
-                            <td><a href="<c:url value='/edit-user-${user.ssoId}' />" class="btn btn-success custom-width"><spring:message code="edit"/></a></td>
+                        <td>${car.regNo}</td>
+                        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
+                            <td><a href="<c:url value='/delete-car-${car.regNo}' />" class="btn btn-danger custom-width"><spring:message code="delete"/></a></td>
                         </sec:authorize>
-                        <sec:authorize access="hasRole('ADMIN')">
-                            <td><a href="<c:url value='/delete-user-${user.ssoId}' />" class="btn btn-danger custom-width"><spring:message code="delete"/></a></td>
+                        <sec:authorize access="hasRole('USER')">
+                            <td><a href="<c:url value='/rent-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="rent"/></a></td>
+                        </sec:authorize>
+                        <sec:authorize access="!hasAnyRole('ADMIN', 'DEALER','USER')">
+                            <td><a href="<c:url value='/login' />" class="btn btn-primary"><spring:message code="login.to.more"/></a></td>
                         </sec:authorize>
                     </tr>
+                    </c:if>
                 </c:forEach>
                 </tbody>
             </table>

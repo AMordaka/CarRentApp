@@ -15,6 +15,7 @@
                 <th><spring:message code="lastname"/></th>
                 <th><spring:message code="email"/></th>
                 <th><spring:message code="login"/></th>
+                <th><spring:message code="cars"/></th>
             </tr>
             </thead>
             <tbody>
@@ -23,8 +24,10 @@
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>
                     <td>${user.ssoId}</td>
+                    <td>${user.cars}</td>
                 </tr>
             </tbody>
+
         </table>
     </div>
 </section><!--/#about-->
