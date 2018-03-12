@@ -18,7 +18,6 @@
     </div>
 </footer><!--/#footer-->
 
-
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/owl.carousel.min.js"></script>
@@ -27,7 +26,6 @@
 <script src="/static/js/jquery.prettyPhoto.js"></script>
 <script src="/static/js/jquery.inview.min.js"></script>
 <script src="/static/js/wow.min.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
 <script type="text/javascript" src="/static/js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 <script src="/static/js/custom-scripts.js"></script>

@@ -27,4 +27,5 @@
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+
 </head>
