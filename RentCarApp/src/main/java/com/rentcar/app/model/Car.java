@@ -6,6 +6,8 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="CAR")
@@ -28,14 +30,15 @@ public class Car implements Serializable{
     private boolean available = true;
 
     @Column(name = "START_DATE")
-    private Date startDate;
+    private String startDate;
 
     @Column(name = "RETURN_DATE")
-    private Date returnDate;
+    private String returnDate;
 
     @OneToOne
     @JoinColumn(name="CAR_TYPE_ID")
     private CarType carType;
+
 
     public long getId() {
         return id;
@@ -69,19 +72,19 @@ public class Car implements Serializable{
         this.available = available;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getReturnDate() {
+    public String getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(String returnDate) {
         this.returnDate = returnDate;
     }
 

@@ -46,8 +46,8 @@ public class User implements Serializable{
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "RESERVATION",
-            joinColumns = { @JoinColumn(name = "USER_ID") },
-            inverseJoinColumns = { @JoinColumn(name = "CAR_ID") })
+            joinColumns = { @JoinColumn(name = "USER_ID")},
+            inverseJoinColumns = { @JoinColumn(name = "CAR_ID")})
     private Set<Car> cars = new HashSet<>();
 
 	public Integer getId() {

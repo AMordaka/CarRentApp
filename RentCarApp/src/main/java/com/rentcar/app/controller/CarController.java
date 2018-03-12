@@ -42,8 +42,17 @@ public class CarController {
 
     @RequestMapping(value = { "/rent-car-{regNo}" }, method = RequestMethod.GET)
     public String rentCar(@PathVariable String regNo, ModelMap model) {
-        model.addAttribute("car", carService.findCarByRegNo(regNo));
+        Car car = carService.findCarByRegNo(regNo);
+        model.addAttribute("car", car);
+
         return "rentcar";
+    }
+
+    @RequestMapping(value = { "/rent-car-{regNo}" }, method = RequestMethod.POST)
+    public String saveRentCar(@Valid Car car,  BindingResult result, ModelMap model) {
+        carService.rentCar(car,userService.getPrincipal());
+        model.addAttribute("success", "Car " + car.getRegNo() + " rented successfully");
+        return "registrationsuccess";
     }
 
     @RequestMapping(value = { "/newcar" }, method = RequestMethod.GET)

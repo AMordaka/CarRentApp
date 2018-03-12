@@ -22,4 +22,8 @@ public interface CarService {
     Car findCarById(int id);
 
     Car findCarByRegNo(String regNo);
+
+    void updateCar(Car car);
+
+    void rentCar(Car car, String SSO);
 }

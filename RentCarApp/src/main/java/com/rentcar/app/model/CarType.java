@@ -45,8 +45,10 @@ public class CarType {
         this.model = model;
     }
 
+
+
     @Override
     public String toString() {
-        return mark + ' '  + model;
+        return String.valueOf(id);
     }
 }
