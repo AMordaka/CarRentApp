@@ -50,6 +50,12 @@ public class User implements Serializable{
             inverseJoinColumns = { @JoinColumn(name = "CAR_ID")})
     private Set<Car> cars = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "OWNED_CAR",
+            joinColumns = { @JoinColumn(name = "USER_ID")},
+            inverseJoinColumns = { @JoinColumn(name = "CAR_ID")})
+    private Set<Car> ownedCars = new HashSet<>();
+
 	public Integer getId() {
 		return id;
 	}
@@ -112,6 +118,14 @@ public class User implements Serializable{
 
     public void setCars(Set<Car> cars) {
         this.cars = cars;
+    }
+
+    public Set<Car> getOwnedCars() {
+        return ownedCars;
+    }
+
+    public void setOwnedCars(Set<Car> ownedCars) {
+        this.ownedCars = ownedCars;
     }
 
     @Override

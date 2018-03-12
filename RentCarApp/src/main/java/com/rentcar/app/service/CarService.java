@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CarService {
 
-    void saveCar(Car car);
+    void saveCar(Car car, String SSO);
 
     List<Car> findAllCars();
 

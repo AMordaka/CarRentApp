@@ -50,7 +50,7 @@ public class CarController {
 
     @RequestMapping(value = { "/rent-car-{regNo}" }, method = RequestMethod.POST)
     public String saveRentCar(@Valid Car car,  BindingResult result, ModelMap model) {
-        carService.rentCar(car,userService.getPrincipal());
+        carService.rentCar(car, userService.getPrincipal());
         model.addAttribute("success", "Car " + car.getRegNo() + " rented successfully");
         return "registrationsuccess";
     }
@@ -75,10 +75,8 @@ public class CarController {
             result.addError(ssoError);
             return "registercar";
         }
-
-        carService.saveCar(car);
-
-        model.addAttribute("success", "User " + car.getRegNo() + " registered successfully");
+        carService.saveCar(car, userService.getPrincipal());
+        model.addAttribute("success", "Car " + car.getRegNo() + " registered successfully");
         model.addAttribute("loggedinuser", userService.getPrincipal());
         return "registrationsuccess";
     }

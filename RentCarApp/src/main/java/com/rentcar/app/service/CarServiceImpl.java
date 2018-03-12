@@ -26,8 +26,10 @@ public class CarServiceImpl implements CarService {
     private UserDao userDao;
 
 
-    public void saveCar(Car car) {
+    public void saveCar(Car car, String SSO) {
         carDao.save(car);
+        User user = userDao.findBySSO(SSO);
+        user.getOwnedCars().add(car);
     }
 
     public List<Car> findAllCars() {
