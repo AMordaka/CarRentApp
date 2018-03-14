@@ -16,6 +16,7 @@
                 <th><spring:message code="email"/></th>
                 <th><spring:message code="login"/></th>
                 <th><spring:message code="cars"/></th>
+                <th>Twoje auta/></th>
             </tr>
             </thead>
             <tbody>
@@ -25,6 +26,7 @@
                     <td>${user.email}</td>
                     <td>${user.ssoId}</td>
                     <td>${user.cars}</td>
+                    <td>${user.ownedCars}</td>
                 </tr>
             </tbody>
 

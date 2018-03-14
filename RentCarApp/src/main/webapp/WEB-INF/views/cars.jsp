@@ -7,9 +7,6 @@
 </div>
 <section id="about">
     <div class="container">
-        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
-            <a class="btn btn-primary" href="<c:url value='/newcar' />"><spring:message code="register.car"/></a>
-        </sec:authorize>
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading"><span class="lead"><spring:message code="list.of.cars"/></span></div>
@@ -36,9 +33,9 @@
                         <sec:authorize access="!hasAnyRole('ADMIN', 'DEALER','USER')">
                             <td width="80px"><a href="<c:url value='/login' />" class="btn btn-danger"><spring:message code="login.to.more"/></a></td>
                         </sec:authorize>
-                        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
+<%--                        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
                             <td width="80px"><a href="<c:url value='/delete-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="delete"/></a></td>
-                        </sec:authorize>
+                        </sec:authorize>--%>
                     </tr>
                     </c:if>
                 </c:forEach>

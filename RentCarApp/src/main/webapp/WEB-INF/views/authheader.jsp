@@ -21,6 +21,9 @@
                     <li class="scroll"><a href="<c:url value="/list" />"><spring:message code="users"/></a></li>
                     </sec:authorize>
                     <li class="scroll"><a href="<c:url value="/cars" />"><spring:message code="cars"/></a></li>
+                    <sec:authorize access="hasRole('DEALER')">
+                        <li class="scroll"><a href="<c:url value="/yourcars" />"><spring:message code="your.cars"/></a></li>
+                    </sec:authorize>
                     <li class="scroll"><a href="<c:url value="/about" />"><spring:message code="about.us"/></a></li>
                     <sec:authorize access="hasAnyRole('ADMIN', 'USER', 'DEALER')">
                         <li class="scroll"><a href="<c:url value="/userpanel" />"><spring:message code="user.panel"/></a></li>

@@ -49,10 +49,6 @@ public class AppController {
 	}
 
 
-
-
-
-
     @RequestMapping(value="/cars", method = RequestMethod.GET)
     public String carsPage (ModelMap model){
         model.addAttribute("loggedinuser", userService.getPrincipal());
@@ -78,5 +74,13 @@ public class AppController {
         model.addAttribute("loggedinuser", userService.getPrincipal());
         model.addAttribute("user", user);
         return "userpanel";
+    }
+
+
+    @RequestMapping(value="/yourcars", method = RequestMethod.GET)
+    public String yourCars (ModelMap model){
+        model.addAttribute("loggedinuser", userService.getPrincipal());
+        model.addAttribute("cars", carService.findAllCars());
+        return "yourcars";
     }
 }
