@@ -20,9 +20,6 @@
                     <th><spring:message code="model"/></th>
                     <th><spring:message code="year"/></th>
                     <th><spring:message code="reg.no"/></th>
-                    <th width="100"></th>
-
-
                 </tr>
                 </thead>
                 <tbody>
@@ -33,14 +30,14 @@
                         <td>${car.carType.model}</td>
                         <td>${car.year}</td>
                         <td>${car.regNo}</td>
-                        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
-                            <td><a href="<c:url value='/delete-car-${car.regNo}' />" class="btn btn-danger custom-width"><spring:message code="delete"/></a></td>
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('USER')">
-                            <td><a href="<c:url value='/rent-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="rent"/></a></td>
+                        <sec:authorize access="hasAnyRole('USER','DEALER')">
+                            <td width="80px"><a href="<c:url value='/rent-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="rent"/></a></td>
                         </sec:authorize>
                         <sec:authorize access="!hasAnyRole('ADMIN', 'DEALER','USER')">
-                            <td><a href="<c:url value='/login' />" class="btn btn-primary"><spring:message code="login.to.more"/></a></td>
+                            <td width="80px"><a href="<c:url value='/login' />" class="btn btn-danger"><spring:message code="login.to.more"/></a></td>
+                        </sec:authorize>
+                        <sec:authorize access="hasAnyRole('ADMIN', 'DEALER')">
+                            <td width="80px"><a href="<c:url value='/delete-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="delete"/></a></td>
                         </sec:authorize>
                     </tr>
                     </c:if>

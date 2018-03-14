@@ -52,6 +52,11 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
     width: 80px !important;
 }
 
+.custom-height {
+    height: 40px !important;
+    text-align: center;
+}
+
 body, #mainWrapper, .form-control{
 	font-size:12px!important;
 }
@@ -113,4 +118,9 @@ width: 200px;
 }
 .searcher-form{
     margin-left: 10px;
+}
+
+.btn-rent{
+    margin-left:33%;
+    margin-right:35%;
 }
