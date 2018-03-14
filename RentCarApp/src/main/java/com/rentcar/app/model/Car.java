@@ -39,6 +39,11 @@ public class Car implements Serializable{
     @JoinColumn(name="CAR_TYPE_ID")
     private CarType carType;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "OWNED_CAR",
+            joinColumns = { @JoinColumn(name = "CAR_ID")},
+            inverseJoinColumns = { @JoinColumn(name = "USER_ID")})
+    private Set<User> users;
 
     public long getId() {
         return id;
@@ -95,6 +100,15 @@ public class Car implements Serializable{
     public void setCarType(CarType carType) {
         this.carType = carType;
     }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
 
     @Override
     public String toString() {
