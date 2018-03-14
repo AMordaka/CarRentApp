@@ -4,6 +4,7 @@ import com.rentcar.app.model.Car;
 import com.rentcar.app.model.CarType;
 
 import java.util.List;
+import java.util.Set;
 
 public interface CarService {
 
@@ -14,6 +15,8 @@ public interface CarService {
     void deleteCarByRegNo(String rego);
 
     List<CarType> findAllCarType();
+
+    List<Car> findUserCars(String SSO);
 
     boolean isRegNoUnique(Integer id, String regNo);
 

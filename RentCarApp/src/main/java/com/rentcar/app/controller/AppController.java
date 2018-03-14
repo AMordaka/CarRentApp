@@ -80,7 +80,7 @@ public class AppController {
     @RequestMapping(value="/yourcars", method = RequestMethod.GET)
     public String yourCars (ModelMap model){
         model.addAttribute("loggedinuser", userService.getPrincipal());
-        model.addAttribute("cars", carService.findAllCars());
+        model.addAttribute("cars", carService.findUserCars(userService.getPrincipal()));
         return "yourcars";
     }
 }
