@@ -19,7 +19,7 @@
                 <p><spring:message code="email"/>: ${user.email}</p>
             </div>
             <div class="col-sm-8 wow fadeInRight">
-                <c:if test="${user.cars} not empty">
+                <c:if test="${not empty user.cars}">
                 <p><spring:message code="rented.cars"/>:</p>
 
                 <table class="table table-hover">
