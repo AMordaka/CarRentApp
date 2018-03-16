@@ -13,6 +13,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.util.Locale;
@@ -79,6 +80,16 @@ public class CarController {
         model.addAttribute("success", "Car " + car.getRegNo() + " registered successfully");
         model.addAttribute("loggedinuser", userService.getPrincipal());
         return "registrationsuccess";
+    }
+
+    @RequestMapping(value = {"/cars" }, method = RequestMethod.GET)
+    public String listUsers(@RequestParam(value = "regNo", required = false) String regNo, ModelMap model) {
+        if(regNo != null) {
+            model.addAttribute("findcar", carService.findCarByRegNo(regNo));
+        }
+        model.addAttribute("loggedinuser", userService.getPrincipal());
+        model.addAttribute("cars", carService.findAllCars());
+        return "cars";
     }
 
 }

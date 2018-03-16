@@ -37,6 +37,9 @@ public class User implements Serializable{
 	@Column(name="EMAIL", nullable=false)
 	private String email;
 
+	@Column(name="PICTURE")
+    private byte[] picture;
+
 	@NotEmpty
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "USERS_PROFILES",
@@ -126,6 +129,14 @@ public class User implements Serializable{
 
     public void setOwnedCars(Set<Car> ownedCars) {
         this.ownedCars = ownedCars;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 
     @Override
