@@ -7,6 +7,7 @@
 </div>
 <section id="about">
     <div class="container">
+        <%@include file="searchcars.jsp" %>
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading"><span class="lead"><spring:message code="list.of.cars"/></span></div>

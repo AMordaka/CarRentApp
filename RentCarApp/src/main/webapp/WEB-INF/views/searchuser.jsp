@@ -19,12 +19,7 @@
                 <th><spring:message code="lastname"/></th>
                 <th><spring:message code="email"/></th>
                 <th><spring:message code="login"/></th>
-                <sec:authorize access="hasRole('ADMIN')">
-                    <th width="100"></th>
-                </sec:authorize>
-                <sec:authorize access="hasRole('ADMIN')">
-                    <th width="100"></th>
-                </sec:authorize>
+
             </tr>
             </thead>
             <tbody>
