@@ -41,6 +41,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
         `first_name` VARCHAR(30) NOT NULL ,
         `last_name` VARCHAR(30) NOT NULL ,
         `email` VARCHAR(30) NOT NULL ,
+        `picture` BLOB NULL ,
         PRIMARY KEY (`id`) ,
         UNIQUE INDEX `sso_id` (`sso_id` ASC) )
         ENGINE = InnoDB
@@ -163,9 +164,9 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
         -- -----------------------------------------------------
         SET AUTOCOMMIT=0;
         USE `mydb`;
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`) VALUES ('1', 'admin', '$2a$10$26zxc3yKpMNkakpYf.1W9.DnmlRvsnEX0Ya8nta6EV70niXyvFAU2', 'admin', 'admin', 'admin@admin.pl');
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`) VALUES ('2', 'user', '$2a$10$1biSRFRwFK7QTGsdQk/di.vIeoyYqZj96YWX7vtSST27/f.TDKGHe', 'user', 'user', 'user@user.pl');
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`) VALUES ('3', 'dealer', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'dealer', 'dealer', 'dealer@dealer.pl');
+        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('1', 'admin', '$2a$10$26zxc3yKpMNkakpYf.1W9.DnmlRvsnEX0Ya8nta6EV70niXyvFAU2', 'admin', 'admin', 'admin@rentcar.pl', NULL);
+        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('2', 'dealer', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'dealer', 'dealer', 'dealer@carrental.pl', NULL);
+        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('3', 'user', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'user', 'user', 'user@carrental.pl', NULL);
 
         COMMIT;
 
@@ -175,8 +176,8 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
         SET AUTOCOMMIT=0;
         USE `mydb`;
         INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('1', '1');
-        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('2', '3');
-        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('3', '2');
+        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('2', '2');
+        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('3', '3');
 
         COMMIT;
 

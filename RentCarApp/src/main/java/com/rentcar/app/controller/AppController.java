@@ -49,13 +49,6 @@ public class AppController {
 	}
 
 
-    @RequestMapping(value="/cars", method = RequestMethod.GET)
-    public String carsPage (ModelMap model){
-        model.addAttribute("loggedinuser", userService.getPrincipal());
-        model.addAttribute("cars", carService.findAllCars());
-	    return "cars";
-    }
-
     @RequestMapping(value={ "/", "/homepage"}, method = RequestMethod.GET)
     public String homePage (ModelMap model){
         model.addAttribute("loggedinuser", userService.getPrincipal());
