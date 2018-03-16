@@ -47,9 +47,6 @@
                 </table>
             </div>
             </c:if>
-
-
-
         </div>
 </section><!--/#about-->
 <%@include file="footer.jsp" %>
