@@ -21,7 +21,6 @@
             <div class="col-sm-8 wow fadeInRight">
                 <c:if test="${not empty user.cars}">
                 <p><spring:message code="rented.cars"/>:</p>
-
                 <table class="table table-hover">
                     <thead>
                     <tr>
