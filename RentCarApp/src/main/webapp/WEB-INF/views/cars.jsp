@@ -28,7 +28,7 @@
                         <td>${car.carType.model}</td>
                         <td>${car.year}</td>
                         <td>${car.regNo}</td>
-                        <sec:authorize access="hasAnyRole('USER','DEALER')">
+                        <sec:authorize access="hasAnyRole('USER')">
                             <td width="80px"><a href="<c:url value='/rent-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="rent"/></a></td>
                         </sec:authorize>
                         <sec:authorize access="!hasAnyRole('ADMIN', 'DEALER','USER')">
