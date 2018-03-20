@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -44,6 +45,12 @@ public class Car implements Serializable{
             joinColumns = { @JoinColumn(name = "CAR_ID")},
             inverseJoinColumns = { @JoinColumn(name = "USER_ID")})
     private Set<User> users;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "RESERVATION",
+            joinColumns = { @JoinColumn(name = "CAR_ID")},
+            inverseJoinColumns = { @JoinColumn(name = "USER_ID")})
+    private List<User> rentUsers;
 
     public long getId() {
         return id;
@@ -109,6 +116,36 @@ public class Car implements Serializable{
         this.users = users;
     }
 
+    public List<User> getRentUsers() {
+        return rentUsers;
+    }
+
+    public void setRentUsers(List<User> rentUsers) {
+        this.rentUsers = rentUsers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Car car = (Car) o;
+
+        if (id != car.id) return false;
+        return regNo != null ? regNo.equals(car.regNo) : car.regNo == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (regNo != null ? regNo.hashCode() : 0);
+        result = 31 * result + (year != null ? year.hashCode() : 0);
+        result = 31 * result + (available ? 1 : 0);
+        result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
+        result = 31 * result + (returnDate != null ? returnDate.hashCode() : 0);
+        result = 31 * result + (carType != null ? carType.hashCode() : 0);
+        return result;
+    }
 
     @Override
     public String toString() {

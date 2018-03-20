@@ -29,4 +29,6 @@ public interface CarService {
     void updateCar(Car car);
 
     void rentCar(Car car, String SSO);
+
+    void freeCar(Car car, String SSO);
 }

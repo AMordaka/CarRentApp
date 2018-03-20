@@ -90,6 +90,21 @@ public class CarServiceImpl implements CarService {
         }
     }
 
+    public void freeCar(Car car, String SSO){
+        Car entity = carDao.findByRegNo(car.getRegNo());
+        User user = userDao.findBySSO(SSO);
+        if(entity!=null){
+            user.getCars().remove(entity);
+            entity.setRegNo(car.getRegNo());
+            entity.setYear(car.getYear());
+            entity.setAvailable(true);
+            entity.setCarType(car.getCarType());
+            entity.setStartDate(null);
+            entity.setReturnDate(null);
+
+        }
+    }
+
     public List<Car> findUserCars(String SSO) {
         User user = userDao.findBySSO(SSO);
         List cars = new ArrayList();
