@@ -16,11 +16,6 @@ public class CarToCarTypeConverter implements Converter<Object, CarType>{
     @Autowired
     CarService carService;
 
-    public boolean isNumeric(String s) {
-        return s != null && s.matches("[-+]?\\d*\\.?\\d+");
-    }
-
-
     public CarType convert(Object element) {
         String carTypeToString = (String)element;
 

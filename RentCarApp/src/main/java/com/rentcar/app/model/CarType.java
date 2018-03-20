@@ -49,6 +49,6 @@ public class CarType {
 
     @Override
     public String toString() {
-        return String.valueOf(id);
+        return id + " - " + mark + " " + model;
     }
 }

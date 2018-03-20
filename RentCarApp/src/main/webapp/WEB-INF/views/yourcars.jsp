@@ -19,6 +19,8 @@
                     <th><spring:message code="year"/></th>
                     <th><spring:message code="reg.no"/></th>
                     <th><spring:message code="available"/></th>
+                    <th><spring:message code="start.date"/></th>
+                    <th><spring:message code="return.date"/></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -37,6 +39,8 @@
                                     <td><spring:message code="no"/></td>
                                 </c:otherwise>
                             </c:choose>
+                            <td>${car.startDate}</td>
+                            <td>${car.returnDate}</td>
                             <c:if test="${car.available}">
                             <td width="80px"><a href="<c:url value='/delete-car-${car.regNo}' />" class="btn btn-primary"><spring:message code="delete"/></a></td>
                             </c:if>
