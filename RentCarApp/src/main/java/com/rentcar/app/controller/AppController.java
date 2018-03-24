@@ -1,5 +1,6 @@
 package com.rentcar.app.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import com.rentcar.app.model.User;
@@ -7,6 +8,7 @@ import com.rentcar.app.model.UserProfile;
 import com.rentcar.app.service.CarService;
 import com.rentcar.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.codec.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -62,8 +64,13 @@ public class AppController {
     }
 
     @RequestMapping(value={"/userpanel"}, method = RequestMethod.GET)
-    public String userPanelPage (ModelMap model){
+    public String userPanelPage (ModelMap model) throws UnsupportedEncodingException {
         User user = userService.findBySSO(userService.getPrincipal());
+        if(user.getPicture() != null) {
+            byte[] encodeBase64 = Base64.encode(user.getPicture());
+            String base64Encoded = new String(encodeBase64, "UTF-8");
+            model.addAttribute("userImage", base64Encoded);
+        }
         model.addAttribute("loggedinuser", userService.getPrincipal());
         model.addAttribute("user", user);
         return "userpanel";

@@ -5,8 +5,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -124,6 +122,7 @@ public class Car implements Serializable{
         this.rentUsers = rentUsers;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -132,7 +131,9 @@ public class Car implements Serializable{
         Car car = (Car) o;
 
         if (id != car.id) return false;
-        return regNo != null ? regNo.equals(car.regNo) : car.regNo == null;
+        if (regNo != null ? !regNo.equals(car.regNo) : car.regNo != null) return false;
+        if (year != null ? !year.equals(car.year) : car.year != null) return false;
+        return (carType != null ? !carType.equals(car.carType) : car.carType != null);
     }
 
     @Override
@@ -140,9 +141,6 @@ public class Car implements Serializable{
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (regNo != null ? regNo.hashCode() : 0);
         result = 31 * result + (year != null ? year.hashCode() : 0);
-        result = 31 * result + (available ? 1 : 0);
-        result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
-        result = 31 * result + (returnDate != null ? returnDate.hashCode() : 0);
         result = 31 * result + (carType != null ? carType.hashCode() : 0);
         return result;
     }

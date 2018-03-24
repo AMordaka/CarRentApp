@@ -124,3 +124,9 @@ width: 200px;
     margin-left:33%;
     margin-right:35%;
 }
+
+.userImage{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}

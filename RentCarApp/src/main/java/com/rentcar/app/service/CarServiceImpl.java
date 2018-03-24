@@ -80,13 +80,13 @@ public class CarServiceImpl implements CarService {
         Car entity = carDao.findByRegNo(car.getRegNo());
         User user = userDao.findBySSO(SSO);
         if(entity!=null){
+            user.getCars().add(car);
             entity.setRegNo(car.getRegNo());
             entity.setYear(car.getYear());
             entity.setAvailable(false);
             entity.setCarType(car.getCarType());
             entity.setStartDate(car.getStartDate());
             entity.setReturnDate(car.getReturnDate());
-            user.getCars().add(car);
         }
     }
 
@@ -101,7 +101,6 @@ public class CarServiceImpl implements CarService {
             entity.setCarType(car.getCarType());
             entity.setStartDate(null);
             entity.setReturnDate(null);
-
         }
     }
 

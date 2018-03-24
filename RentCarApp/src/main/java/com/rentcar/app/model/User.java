@@ -1,7 +1,6 @@
 package com.rentcar.app.model;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -38,6 +37,7 @@ public class User implements Serializable{
 	@Column(name="EMAIL", nullable=false)
 	private String email;
 
+	@Lob
 	@Column(name="PICTURE")
     private byte[] picture;
 
@@ -48,7 +48,7 @@ public class User implements Serializable{
              inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
 	private Set<UserProfile> userProfiles = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "RESERVATION",
             joinColumns = { @JoinColumn(name = "USER_ID")},
             inverseJoinColumns = { @JoinColumn(name = "CAR_ID")})
@@ -153,7 +153,6 @@ public class User implements Serializable{
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
         if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        if (!Arrays.equals(picture, user.picture)) return false;
         if (userProfiles != null ? !userProfiles.equals(user.userProfiles) : user.userProfiles != null) return false;
         if (cars != null ? !cars.equals(user.cars) : user.cars != null) return false;
         return ownedCars != null ? ownedCars.equals(user.ownedCars) : user.ownedCars == null;
@@ -167,7 +166,6 @@ public class User implements Serializable{
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + Arrays.hashCode(picture);
         result = 31 * result + (userProfiles != null ? userProfiles.hashCode() : 0);
         return result;
     }

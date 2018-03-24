@@ -13,6 +13,17 @@
 
         <div class="row">
             <div class="col-sm-4 wow fadeInLeft">
+                <c:choose>
+                    <c:when test="${not empty userImage}">
+                        <img class="userImage" src="data:image/jpeg;base64,${userImage}" />
+                    </c:when>
+                    <c:otherwise>
+                        <form:form method="POST" modelAttribute="user"  enctype="multipart/form-data">
+                            <form:input path="picture" id="picture" type="file" />
+                            <input type="submit" value="<spring:message code="rent"/>" class="btn btn-block btn-primary"/>
+                        </form:form>
+                    </c:otherwise>
+                </c:choose>
                 <p><spring:message code="login"/>: ${user.ssoId}</p>
                 <p><spring:message code="firstname"/>: ${user.firstName}</p>
                 <p><spring:message code="lastname"/>: ${user.lastName}</p>
