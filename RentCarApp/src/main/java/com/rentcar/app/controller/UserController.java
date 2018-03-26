@@ -6,16 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.codec.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.validation.Valid;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -87,15 +89,12 @@ public class UserController {
         if (result.hasErrors()) {
             return "registration";
         }
-
         if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
             FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
             result.addError(ssoError);
             return "registration";
         }
-
         userService.saveUser(user);
-
         model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " registered successfully");
         model.addAttribute("loggedinuser", userService.getPrincipal());
         return "registrationsuccess";
@@ -113,4 +112,16 @@ public class UserController {
         return "userslist";
     }
 
+    @RequestMapping(value={"/userpanel"}, method = RequestMethod.GET)
+    public String userPanelPage (ModelMap model) throws UnsupportedEncodingException {
+        User user = userService.findBySSO(userService.getPrincipal());
+        if(user.getPicture() != null) {
+            byte[] encodeBase64 = Base64.encode(user.getPicture());
+            String base64Encoded = new String(encodeBase64, "UTF-8");
+            model.addAttribute("userImage", base64Encoded);
+        }
+        model.addAttribute("loggedinuser", userService.getPrincipal());
+        model.addAttribute("user", user);
+        return "userpanel";
+    }
 }

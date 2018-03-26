@@ -63,19 +63,6 @@ public class AppController {
         return "about";
     }
 
-    @RequestMapping(value={"/userpanel"}, method = RequestMethod.GET)
-    public String userPanelPage (ModelMap model) throws UnsupportedEncodingException {
-        User user = userService.findBySSO(userService.getPrincipal());
-        if(user.getPicture() != null) {
-            byte[] encodeBase64 = Base64.encode(user.getPicture());
-            String base64Encoded = new String(encodeBase64, "UTF-8");
-            model.addAttribute("userImage", base64Encoded);
-        }
-        model.addAttribute("loggedinuser", userService.getPrincipal());
-        model.addAttribute("user", user);
-        return "userpanel";
-    }
-
 
     @RequestMapping(value="/yourcars", method = RequestMethod.GET)
     public String yourCars (ModelMap model){

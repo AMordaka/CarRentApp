@@ -50,7 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/delete-user-*")
                 .access("hasRole('ADMIN')")
                 .antMatchers("/edit-user-*")
-				.access("hasRole('ADMIN')").and().formLogin().loginPage("/login")
+				.access("hasAnyRole('ADMIN', 'DEALER','USER')").and().formLogin().loginPage("/login")
 				.loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
 				.rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
 				.tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");

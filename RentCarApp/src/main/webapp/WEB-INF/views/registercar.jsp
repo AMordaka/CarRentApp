@@ -11,7 +11,6 @@
             <h1><spring:message code="register.car"/></h1>
             <form:form method="POST" modelAttribute="car" class="form-horizontal">
                 <form:input type="hidden" path="id" id="id"/>
-
             <div class="row">
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="carType"><spring:message code="model"/></label>

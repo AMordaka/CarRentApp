@@ -45,7 +45,6 @@ public class CarController {
     public String rentCar(@PathVariable String regNo, ModelMap model) {
         Car car = carService.findCarByRegNo(regNo);
         model.addAttribute("car", car);
-
         return "rentcar";
     }
 
