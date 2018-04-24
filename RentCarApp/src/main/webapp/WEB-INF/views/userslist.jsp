@@ -10,38 +10,17 @@
         <div class="panel panel-default">
             <%@include file="searchuser.jsp" %>
             <div class="panel-heading"><span class="lead"><spring:message code="list.of.users"/></span></div>
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th><spring:message code="firstname"/></th>
-                    <th><spring:message code="lastname"/></th>
-                    <th><spring:message code="email"/></th>
-                    <th><spring:message code="login"/></th>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <th width="100"></th>
-                    </sec:authorize>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <th width="100"></th>
-                    </sec:authorize>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${users}" var="user">
-                    <tr>
-                        <td>${user.firstName}</td>
-                        <td>${user.lastName}</td>
-                        <td>${user.email}</td>
-                        <td>${user.ssoId}</td>
-                        <sec:authorize access="hasRole('ADMIN')">
-                            <td><a href="<c:url value='/edit-user-${user.ssoId}' />" class="btn btn-success custom-width"><spring:message code="edit"/></a></td>
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('ADMIN')">
-                            <td><a href="<c:url value='/delete-user-${user.ssoId}' />" class="btn btn-danger custom-width"><spring:message code="delete"/></a></td>
-                        </sec:authorize>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+            <spring:url value="/list" var="listURL" />
+            <display:table name="users" requestURI="${listURL}" pagesize="10" export="true" class="table table-hover">
+                <display:column property="firstName" title="Firstname" />
+                <display:column property="lastName" title="Secondname" />
+                <display:column property="email" title="email" />
+                <display:column property="ssoId" title="login" />
+                <display:setProperty name="export.csv.filename" value="users.csv"/>
+                <display:setProperty name="export.excel.filename" value="users.xls"/>
+                <display:setProperty name="export.pdf.filename" value="users.pdf"/>
+                <display:setProperty name="export.pdf" value="true" />
+            </display:table>
         </div>
     </div>
 </section><!--/#about-->

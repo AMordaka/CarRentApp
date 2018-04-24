@@ -153,7 +153,6 @@ public class User implements Serializable{
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
         if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        if (userProfiles != null ? !userProfiles.equals(user.userProfiles) : user.userProfiles != null) return false;
         if (cars != null ? !cars.equals(user.cars) : user.cars != null) return false;
         return ownedCars != null ? ownedCars.equals(user.ownedCars) : user.ownedCars == null;
     }
@@ -166,7 +165,6 @@ public class User implements Serializable{
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (userProfiles != null ? userProfiles.hashCode() : 0);
         return result;
     }
 
