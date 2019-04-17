@@ -1,242 +1,275 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-        SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-        SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
-
-        DROP SCHEMA IF EXISTS `mydb` ;
-        CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-        USE `mydb` ;
-
+-- -----------------------------------------------------
+        -- Table `MyDataBase`.`persistent_logins`
         -- -----------------------------------------------------
-        -- Table `mydb`.`persistent_logins`
-        -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`persistent_logins` (
-        `username` VARCHAR(64) NOT NULL ,
-        `series` VARCHAR(64) NOT NULL ,
-        `token` VARCHAR(64) NOT NULL ,
-        `last_used` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
-        PRIMARY KEY (`series`) )
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE  TABLE MyDataBase.persistent_logins (
+        username VARCHAR2(64) NOT NULL ,
+        series VARCHAR2(64) NOT NULL ,
+        token VARCHAR2(64) NOT NULL ,
+        last_used TIMESTAMP(0) DEFAULT SYSTIMESTAMP NOT NULL ,
+        PRIMARY KEY (series) )
+        ;
 
 
         -- -----------------------------------------------------
-        -- Table `mydb`.`profile`
+        -- Table `MyDataBase`.`profile`
         -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`profile` (
-        `id` INT NOT NULL AUTO_INCREMENT ,
-        `type` VARCHAR(30) NOT NULL ,
-        PRIMARY KEY (`id`) ,
-        UNIQUE INDEX `type` (`type` ASC) )
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE  TABLE MyDataBase.profile (
+        id NUMBER(10) NOT NULL ,
+        type VARCHAR2(30) NOT NULL ,
+        PRIMARY KEY (id) ,
+        CONSTRAINT type UNIQUE  (type) )
+        ;
 
+        -- Generate ID using sequence and trigger
+        CREATE SEQUENCE MyDataBase.profile_seq START WITH 1 INCREMENT BY 1;
 
-        -- -----------------------------------------------------
-        -- Table `mydb`.`user`
-        -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`user` (
-        `id` INT NOT NULL AUTO_INCREMENT ,
-        `sso_id` VARCHAR(30) NOT NULL ,
-        `password` VARCHAR(100) NOT NULL ,
-        `first_name` VARCHAR(30) NOT NULL ,
-        `last_name` VARCHAR(30) NOT NULL ,
-        `email` VARCHAR(30) NOT NULL ,
-        `picture` BLOB NULL ,
-        PRIMARY KEY (`id`) ,
-        UNIQUE INDEX `sso_id` (`sso_id` ASC) )
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE OR REPLACE TRIGGER MyDataBase.profile_seq_tr
+        BEFORE INSERT ON MyDataBase.profile FOR EACH ROW
+        WHEN (NEW.id IS NULL)
+        BEGIN
+        SELECT MyDataBase.profile_seq.NEXTVAL INTO :NEW.id FROM DUAL;
+        END;
+        /
 
 
         -- -----------------------------------------------------
-        -- Table `mydb`.`users_profiles`
+        -- Table `MyDataBase`.`user`
         -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`users_profiles` (
-        `user_id` INT NOT NULL ,
-        `user_profile_id` INT NOT NULL ,
-        PRIMARY KEY (`user_id`, `user_profile_id`) ,
-        INDEX `FK_USER_PROFILE` (`user_profile_id` ASC) ,
-        CONSTRAINT `FK_APP_USER`
-        FOREIGN KEY (`user_id` )
-        REFERENCES `mydb`.`user` (`id` ),
-        CONSTRAINT `FK_USER_PROFILE`
-        FOREIGN KEY (`user_profile_id` )
-        REFERENCES `mydb`.`profile` (`id` ))
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE  TABLE MyDataBase.user (
+        id NUMBER(10) NOT NULL ,
+        sso_id VARCHAR2(30) NOT NULL ,
+        password VARCHAR2(100) NOT NULL ,
+        first_name VARCHAR2(30) NOT NULL ,
+        last_name VARCHAR2(30) NOT NULL ,
+        email VARCHAR2(30) NOT NULL ,
+        picture BLOB NULL ,
+        PRIMARY KEY (id) ,
+        CONSTRAINT sso_id UNIQUE  (sso_id) )
+        ;
 
+        -- Generate ID using sequence and trigger
+        CREATE SEQUENCE MyDataBase.user_seq START WITH 1 INCREMENT BY 1;
 
-        -- -----------------------------------------------------
-        -- Table `mydb`.`CAR_TYPE`
-        -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`CAR_TYPE` (
-        `CAR_TYPE_ID` INT NOT NULL AUTO_INCREMENT ,
-        `MARK` VARCHAR(45) NULL ,
-        `MODEL` VARCHAR(45) NULL ,
-        PRIMARY KEY (`CAR_TYPE_ID`) )
-        ENGINE = InnoDB;
+        CREATE OR REPLACE TRIGGER MyDataBase.user_seq_tr
+        BEFORE INSERT ON MyDataBase.user FOR EACH ROW
+        WHEN (NEW.id IS NULL)
+        BEGIN
+        SELECT MyDataBase.user_seq.NEXTVAL INTO :NEW.id FROM DUAL;
+        END;
+        /
 
 
         -- -----------------------------------------------------
-        -- Table `mydb`.`CAR`
+        -- Table `MyDataBase`.`users_profiles`
         -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`CAR` (
-        `CAR_ID` INT NOT NULL AUTO_INCREMENT ,
-        `CAR_TYPE_ID` INT NOT NULL ,
-        `REG_NO` VARCHAR(45) NOT NULL ,
-        `YEAR` VARCHAR(4) NOT NULL ,
-        `AVAILABLE` TINYINT(1)  NOT NULL DEFAULT true ,
-        `START_DATE` VARCHAR(10) NULL ,
-        `RETURN_DATE` VARCHAR(10) NULL ,
-        PRIMARY KEY (`CAR_ID`, `CAR_TYPE_ID`) ,
-        INDEX `fk_CAR_CAR_TYPE1` (`CAR_TYPE_ID` ASC) ,
-        UNIQUE INDEX `REG_NO_UNIQUE` (`REG_NO` ASC) ,
-        CONSTRAINT `fk_CAR_CAR_TYPE1`
-        FOREIGN KEY (`CAR_TYPE_ID` )
-        REFERENCES `mydb`.`CAR_TYPE` (`CAR_TYPE_ID` )
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION)
-        ENGINE = InnoDB;
+        CREATE  TABLE MyDataBase.users_profiles (
+        user_id NUMBER(10) NOT NULL ,
+        user_profile_id NUMBER(10) NOT NULL ,
+        PRIMARY KEY (user_id, user_profile_id)
+        ,
+        CONSTRAINT FK_APP_USER
+        FOREIGN KEY (user_id )
+        REFERENCES MyDataBase.user (id ),
+        CONSTRAINT FK_USER_PROFILE
+        FOREIGN KEY (user_profile_id )
+        REFERENCES MyDataBase.profile (id ))
+        ;
+
+        CREATE INDEX FK_USER_PROFILE ON MyDataBase.users_profiles (user_profile_id ASC);
 
 
         -- -----------------------------------------------------
-        -- Table `mydb`.`RESERVATION`
+        -- Table `MyDataBase`.`CAR_TYPE`
         -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`RESERVATION` (
-        `USER_ID` INT NOT NULL ,
-        `CAR_ID` INT NOT NULL ,
-        PRIMARY KEY (`USER_ID`, `CAR_ID`) ,
-        INDEX `fk_user_has_CAR_CAR1` (`CAR_ID` ASC) ,
-        CONSTRAINT `fk_user_has_CAR_user1`
-        FOREIGN KEY (`USER_ID` )
-        REFERENCES `mydb`.`user` (`id` )
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION,
-        CONSTRAINT `fk_user_has_CAR_CAR1`
-        FOREIGN KEY (`CAR_ID` )
-        REFERENCES `mydb`.`CAR` (`CAR_ID` )
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION)
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE  TABLE MyDataBase.CAR_TYPE (
+        CAR_TYPE_ID NUMBER(10) NOT NULL ,
+        MARK VARCHAR2(45) NULL ,
+        MODEL VARCHAR2(45) NULL ,
+        PRIMARY KEY (CAR_TYPE_ID) )
+        ;
 
+        -- Generate ID using sequence and trigger
+        CREATE SEQUENCE MyDataBase.CAR_TYPE_seq START WITH 1 INCREMENT BY 1;
 
-        -- -----------------------------------------------------
-        -- Table `mydb`.`OWNED_CAR`
-        -- -----------------------------------------------------
-        CREATE  TABLE IF NOT EXISTS `mydb`.`OWNED_CAR` (
-        `USER_ID` INT NOT NULL ,
-        `CAR_ID` INT NOT NULL ,
-        PRIMARY KEY (`USER_ID`, `CAR_ID`) ,
-        INDEX `fk_user_has_CAR_CAR1` (`CAR_ID` ASC) ,
-        CONSTRAINT `fk_user_has_CAR_user10`
-        FOREIGN KEY (`USER_ID` )
-        REFERENCES `mydb`.`user` (`id` )
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION,
-        CONSTRAINT `fk_user_has_CAR_CAR10`
-        FOREIGN KEY (`CAR_ID` )
-        REFERENCES `mydb`.`CAR` (`CAR_ID` )
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION)
-        ENGINE = InnoDB
-        DEFAULT CHARACTER SET = utf8;
+        CREATE OR REPLACE TRIGGER MyDataBase.CAR_TYPE_seq_tr
+        BEFORE INSERT ON MyDataBase.CAR_TYPE FOR EACH ROW
+        WHEN (NEW.CAR_TYPE_ID IS NULL)
+        BEGIN
+        SELECT MyDataBase.CAR_TYPE_seq.NEXTVAL INTO :NEW.CAR_TYPE_ID FROM DUAL;
+        END;
+        /
 
-
-
-        SET SQL_MODE=@OLD_SQL_MODE;
-        SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-        SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
         -- -----------------------------------------------------
-        -- Data for table `mydb`.`profile`
+        -- Table `MyDataBase`.`CAR`
         -- -----------------------------------------------------
-        SET AUTOCOMMIT=0;
-        USE `mydb`;
-        INSERT INTO `mydb`.`profile` (`id`, `type`) VALUES ('1', 'ADMIN');
-        INSERT INTO `mydb`.`profile` (`id`, `type`) VALUES ('2', 'DEALER');
-        INSERT INTO `mydb`.`profile` (`id`, `type`) VALUES ('3', 'USER');
+        CREATE  TABLE MyDataBase.CAR (
+        CAR_ID NUMBER(10) NOT NULL ,
+        CAR_TYPE_ID NUMBER(10) NOT NULL ,
+        REG_NO VARCHAR2(45) NOT NULL ,
+        YEAR VARCHAR2(4) NOT NULL ,
+        AVAILABLE NUMBER(3) DEFAULT true  NOT NULL ,
+        START_DATE VARCHAR2(10) NULL ,
+        RETURN_DATE VARCHAR2(10) NULL ,
+        PRIMARY KEY (CAR_ID, CAR_TYPE_ID)
+        ,
+        CONSTRAINT REG_NO_UNIQUE UNIQUE  (REG_NO) ,
+        CONSTRAINT fk_CAR_CAR_TYPE1
+        FOREIGN KEY (CAR_TYPE_ID )
+        REFERENCES MyDataBase.CAR_TYPE (CAR_TYPE_ID )
+        )
+        ;
+
+        -- Generate ID using sequence and trigger
+        CREATE SEQUENCE MyDataBase.CAR_seq START WITH 1 INCREMENT BY 1;
+
+        CREATE OR REPLACE TRIGGER MyDataBase.CAR_seq_tr
+        BEFORE INSERT ON MyDataBase.CAR FOR EACH ROW
+        WHEN (NEW.CAR_ID IS NULL)
+        BEGIN
+        SELECT MyDataBase.CAR_seq.NEXTVAL INTO :NEW.CAR_ID FROM DUAL;
+        END;
+        /
+
+        CREATE INDEX fk_CAR_CAR_TYPE1 ON MyDataBase.CAR (CAR_TYPE_ID ASC);
+
+
+        -- -----------------------------------------------------
+        -- Table `MyDataBase`.`RESERVATION`
+        -- -----------------------------------------------------
+        CREATE  TABLE MyDataBase.RESERVATION (
+        USER_ID NUMBER(10) NOT NULL ,
+        CAR_ID NUMBER(10) NOT NULL ,
+        PRIMARY KEY (USER_ID, CAR_ID)
+        ,
+        CONSTRAINT fk_user_has_CAR_user1
+        FOREIGN KEY (USER_ID )
+        REFERENCES MyDataBase.user (id )
+        ,
+        CONSTRAINT fk_user_has_CAR_CAR1
+        FOREIGN KEY (CAR_ID )
+        REFERENCES MyDataBase.CAR (CAR_ID )
+        )
+        ;
+
+        CREATE INDEX fk_user_has_CAR_CAR1 ON MyDataBase.RESERVATION (CAR_ID ASC);
+
+
+        -- -----------------------------------------------------
+        -- Table `MyDataBase`.`OWNED_CAR`
+        -- -----------------------------------------------------
+        CREATE  TABLE MyDataBase.OWNED_CAR (
+        USER_ID NUMBER(10) NOT NULL ,
+        CAR_ID NUMBER(10) NOT NULL ,
+        PRIMARY KEY (USER_ID, CAR_ID)
+        ,
+        CONSTRAINT fk_user_has_CAR_user10
+        FOREIGN KEY (USER_ID )
+        REFERENCES MyDataBase.user (id )
+        ,
+        CONSTRAINT fk_user_has_CAR_CAR10
+        FOREIGN KEY (CAR_ID )
+        REFERENCES MyDataBase.CAR (CAR_ID )
+        )
+        ;
+
+        CREATE INDEX fk_user_has_CAR_CAR1 ON MyDataBase.OWNED_CAR (CAR_ID ASC);
+
+
+
+        /* SET SQL_MODE=@OLD_SQL_MODE; */
+        /* SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS; */
+        /* SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS; */
+
+        -- -----------------------------------------------------
+        -- Data for table `MyDataBase`.`profile`
+        -- -----------------------------------------------------
+        AUTOCOMMIT:=0;
+        ALTER SESSION SET CURRENT_SCHEMA = MyDataBase;
+        INSERT INTO MyDataBase.profile (id, type) VALUES ('1', 'ADMIN');
+        INSERT INTO MyDataBase.profile (id, type) VALUES ('2', 'DEALER');
+        INSERT INTO MyDataBase.profile (id, type) VALUES ('3', 'USER');
 
         COMMIT;
 
         -- -----------------------------------------------------
-        -- Data for table `mydb`.`user`
+        -- Data for table `MyDataBase`.`user`
         -- -----------------------------------------------------
-        SET AUTOCOMMIT=0;
-        USE `mydb`;
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('1', 'admin', '$2a$10$26zxc3yKpMNkakpYf.1W9.DnmlRvsnEX0Ya8nta6EV70niXyvFAU2', 'admin', 'admin', 'admin@rentcar.pl', NULL);
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('2', 'dealer', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'dealer', 'dealer', 'dealer@carrental.pl', NULL);
-        INSERT INTO `mydb`.`user` (`id`, `sso_id`, `password`, `first_name`, `last_name`, `email`, `picture`) VALUES ('3', 'user', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'user', 'user', 'user@carrental.pl', NULL);
+        AUTOCOMMIT:=0;
+        ALTER SESSION SET CURRENT_SCHEMA = MyDataBase;
+        INSERT INTO MyDataBase.user (id, sso_id, password, first_name, last_name, email, picture) VALUES ('1', 'admin', '$2a$10$26zxc3yKpMNkakpYf.1W9.DnmlRvsnEX0Ya8nta6EV70niXyvFAU2', 'admin', 'admin', 'admin@rentcar.pl', NULL);
+        INSERT INTO MyDataBase.user (id, sso_id, password, first_name, last_name, email, picture) VALUES ('2', 'dealer', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'dealer', 'dealer', 'dealer@carrental.pl', NULL);
+        INSERT INTO MyDataBase.user (id, sso_id, password, first_name, last_name, email, picture) VALUES ('3', 'user', '$2a$10$O3t2tZ8uTPmWwDhr5j8dTO8dRyxxlRQks7wyoAHpLfm7UMLHAnU52', 'user', 'user', 'user@carrental.pl', NULL);
 
         COMMIT;
 
         -- -----------------------------------------------------
-        -- Data for table `mydb`.`users_profiles`
+        -- Data for table `MyDataBase`.`users_profiles`
         -- -----------------------------------------------------
-        SET AUTOCOMMIT=0;
-        USE `mydb`;
-        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('1', '1');
-        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('2', '2');
-        INSERT INTO `mydb`.`users_profiles` (`user_id`, `user_profile_id`) VALUES ('3', '3');
+        AUTOCOMMIT:=0;
+        ALTER SESSION SET CURRENT_SCHEMA = MyDataBase;
+        INSERT INTO MyDataBase.users_profiles (user_id, user_profile_id) VALUES ('1', '1');
+        INSERT INTO MyDataBase.users_profiles (user_id, user_profile_id) VALUES ('2', '2');
+        INSERT INTO MyDataBase.users_profiles (user_id, user_profile_id) VALUES ('3', '3');
 
         COMMIT;
 
         -- -----------------------------------------------------
-        -- Data for table `mydb`.`CAR_TYPE`
+        -- Data for table `MyDataBase`.`CAR_TYPE`
         -- -----------------------------------------------------
-        SET AUTOCOMMIT=0;
-        USE `mydb`;
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES ('1', 'Audi', 'A1');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A4');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A6');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A7');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'A8');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'Q2');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'Q3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'Q5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'Q7');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'TT');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Audi', 'R8');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 1');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 2');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 4');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 6');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'Seria 7');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X1');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X2');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X4');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'BMW', 'X6');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'Berlingo');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C1');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C4');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C6');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'C8');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'DS3');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'DS4');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'DS5');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'Jumper');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Citroen', 'Jumpy');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Tipo');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', '500');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Panda');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Seicento');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Punto');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Qubo');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Fiat', 'Doblo');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'KA');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'Fiesta');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'B-Max');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'C-Max');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'Focus');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, 'Ford', 'S-Max');
-        INSERT INTO `mydb`.`CAR_TYPE` (`CAR_TYPE_ID`, `MARK`, `MODEL`) VALUES (NULL, NULL, '');
+        AUTOCOMMIT:=0;
+        ALTER SESSION SET CURRENT_SCHEMA = MyDataBase;
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'Audi', 'A1');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('2', 'Audi', 'A3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('3', 'Audi', 'A4');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('4', 'Audi', 'A5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('5', 'Audi', 'A6');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('6', 'Audi', 'A7');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('7', 'Audi', 'A8');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('8', 'Audi', 'Q2');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('9', 'Audi', 'Q3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('10', 'Audi', 'Q5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('11', 'Audi', 'Q7');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('12', 'Audi', 'TT');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('13', 'Audi', 'R8');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('14', 'BMW', 'Seria 1');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('15', 'BMW', 'Seria 2');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('16', 'BMW', 'Seria 3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('17', 'BMW', 'Seria 4');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('18', 'BMW', 'Seria 5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('19', 'BMW', 'Seria 6');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('20', 'BMW', 'Seria 7');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X1');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X2');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X4');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'BMW', 'X6');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'Citroen', 'Berlingo');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'Citroen', 'C1');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES ('1', 'Citroen', 'C3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'C4');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'C5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'C6');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'C8');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'DS3');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'DS4');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'DS5');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'Jumper');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Citroen', 'Jumpy');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Tipo');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', '500');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Panda');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Seicento');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Punto');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Qubo');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Fiat', 'Doblo');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'KA');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'Fiesta');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'B-Max');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'C-Max');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'Focus');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, 'Ford', 'S-Max');
+        INSERT INTO MyDataBase.CAR_TYPE (CAR_TYPE_ID, MARK, MODEL) VALUES (NULL, NULL, '');
 
         COMMIT;

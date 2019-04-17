@@ -4,7 +4,6 @@ import com.rentcar.app.model.Car;
 import com.rentcar.app.model.CarType;
 
 import java.util.List;
-import java.util.Set;
 
 public interface CarService {
 
@@ -26,9 +25,9 @@ public interface CarService {
 
     Car findCarByRegNo(String regNo);
 
-    void updateCar(Car car);
-
     void rentCar(Car car, String SSO);
 
     void freeCar(Car car, String SSO);
+
+    boolean checkIfExists(String regNo);
 }

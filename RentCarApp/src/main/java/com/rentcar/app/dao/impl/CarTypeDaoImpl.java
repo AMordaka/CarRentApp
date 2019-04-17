@@ -1,5 +1,7 @@
-package com.rentcar.app.dao;
+package com.rentcar.app.dao.impl;
 
+import com.rentcar.app.dao.AbstractDao;
+import com.rentcar.app.dao.CarTypeDao;
 import com.rentcar.app.model.CarType;
 import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
@@ -11,7 +13,7 @@ public class CarTypeDaoImpl extends AbstractDao<Integer, CarType> implements Car
 
     public List<CarType> getAllCarType() {
         Criteria criteria = createEntityCriteria();
-        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
         List<CarType> carTypes = (List<CarType>) criteria.list();
         return carTypes;
     }

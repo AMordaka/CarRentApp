@@ -1,4 +1,4 @@
-<%@include file="head.jsp" %>
+ <%@include file="head.jsp" %>
 <body id="home">
     <%@include file="authheader.jsp" %>
     <div class="lang">

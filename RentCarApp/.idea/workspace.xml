@@ -6,153 +6,230 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d82abc-b6f2-4f2d-8022-ec8d4744d9cf" name="Default" comment="Usuniecie zbednych plikow">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-    </list>
-    <list id="5950687f-0adf-41e1-8fe8-075851606989" name="Inne" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RentCarApp.iml" afterPath="$PROJECT_DIR$/RentCarApp.iml" />
+    <list default="true" id="ab7e1b9e-109e-407b-b568-c005538766ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/UserProfileDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RentCarApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RentCarApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/CarToCarTypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/CarToCarTypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/RoleToUserProfileConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/RoleToUserProfileConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/StartUp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/CarDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarTypeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/CarTypeDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/HibernateTokenRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/HibernateTokenRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserProfileDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserProfileDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserProfileDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/PersistentLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/PersistentLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path=".idea/" />
-    <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydb@localhost" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mydb@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="mydb" type="e3449647:DbNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-427751144">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="23" />
+          <entry key="java" value="242" />
+          <entry key="jsp" value="39" />
+          <entry key="png" value="1" />
+          <entry key="properties" value="14" />
+          <entry key="rnc" value="2" />
+          <entry key="sql" value="5" />
+          <entry key="tag" value="1" />
+          <entry key="xml" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="23" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="242" />
+          <entry key="JSP" value="40" />
+          <entry key="Properties" value="14" />
+          <entry key="RNG Compact" value="2" />
+          <entry key="SQL" value="5" />
+          <entry key="XML" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="14" />
+          <entry key="java" value="2823" />
+          <entry key="jsp" value="461" />
+          <entry key="properties" value="133" />
+          <entry key="regexp" value="1" />
+          <entry key="tag" value="1" />
+          <entry key="xml" value="524" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="2823" />
+          <entry key="JSP" value="461" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Properties" value="133" />
+          <entry key="RegExp" value="1" />
+          <entry key="XML" value="524" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="436">
+              <caret line="54" column="64" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="64" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1484#1485#0" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-                <element signature="e#4433#4434#0" expanded="true" />
-                <element signature="e#4497#4498#0" expanded="true" />
+                <element signature="e#3430#3431#0" expanded="true" />
+                <element signature="e#3481#3482#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userpanel.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userpanel.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfileType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cars.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cars.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/CustomUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="52" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="40" column="61" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authheader.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="114" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            <state relative-caret-position="585">
+              <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/UserDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
-                <marker date="1521224746556" expanded="true" signature="811:812" ph="@{...}" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#1956#1957#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="88" column="103" selection-start-line="88" selection-start-column="94" selection-end-line="88" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="1125">
+              <caret line="93" column="33" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/AbstractDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages_pl.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_pl.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="23" lean-forward="false" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchcars.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchcars.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding>
-                <marker date="1521224746556" expanded="true" signature="3550:3559" ph="{...}" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,128 +242,109 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>updateCar</find>
-      <find>SSo</find>
-      <find>getCars</find>
-      <find>rent.car</find>
-      <find>input-group date</find>
-      <find>&lt;h3 class=&quot;column-title&quot;&gt;&lt;spring:message code=&quot;offer&quot;/&gt;&lt;/h3&gt;</find>
-      <find>input-group</find>
-      <find>date</find>
-      <find>column</find>
-      <find>col</find>
-      <find>col-</find>
-      <find>login`</find>
-      <find>custom</find>
-      <find>btn</find>
-      <find>btn-primary</find>
-      <find>custom-width</find>
-      <find>choos</find>
-      <find>login</find>
-      <find>commons</find>
-      <find>SpringMVCHibernateManyToManyCRUDExample</find>
-      <find>finduser</find>
-      <find>list</find>
-      <find>userlist</find>
-      <find>cars</find>
-      <find>return &quot;cars&quot;</find>
-      <find>request</find>
-      <find>userpanel</find>
-      <find>return &quot;userpanel</find>
-      <find>not empty</find>
+      <find>getErrorCodes</find>
+      <find>rented successfully</find>
+      <find>c3p0</find>
+      <find>views</find>
+      <find>tokenRepository</find>
+      <find>configureGlobalSecurity</find>
+      <find>user</find>
+      <find>userd</find>
+      <find>UserDetailsService</find>
+      <find>customUserDetailsService</find>
+      <find>WebMvcConfigurerAdapter</find>
+      <find>UserProfileType</find>
+      <find>ADMIN</find>
+      <find>userProfiles</find>
+      <find>initializeProfiles</find>
+      <find>roles</find>
+      <find>JspAuthorizeTag</find>
+      <find>AuthenticationTrustResolver</find>
+      <find>role_user</find>
+      <find>/login</find>
+      <find>ssoId</find>
+      <find>CustomUserDetailsService</find>
+      <find>ROLE_A</find>
+      <find>entit</find>
+      <find>entityman</find>
+      <find>convert</find>
+      <find>RoleToUserProfileConverter</find>
+      <find>DEALER</find>
+      <find>getAuthenticationTrustResolver</find>
+      <find>logout</find>
     </findStrings>
-    <dirStrings>
-      <dir>C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src</dir>
-    </dirStrings>
+    <replaceStrings>
+      <replace>MyDataBase</replace>
+      <replace>selectedCars</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="iss#4" />
-      </map>
-    </option>
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/SearchCriteria.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/SearchCriteria.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/ItemEntry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfileType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarTypeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarTypeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/CarToCarTypeConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/custom-scripts.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/smoothscroll.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/szkielet.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/datepickerstyle.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/moment-2.10.3.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap-datetimepicker.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/style2.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rentcar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/app.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authheader.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/yourcars.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sql.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppConfig.java" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchuser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/exception/CarNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserProfileService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/util/AppUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchcars.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_pl.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cars.jsp" />
+        <option value="$PROJECT_DIR$/sql.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/CarToCarTypeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/RoleToUserProfileConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/HibernateTokenRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/CarType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/CarTypeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/CaptchaSettings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/RestTemplateConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchuser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/CarDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rentcar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/util/CaptchaSettings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/CarServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserProfileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/model/rest/GoogleResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tag/captcha.tag" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userpanel.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CaptchaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/util/RecaptchaUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/CaptchaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rentcar/app/exception/UserNotFoundException.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <annotation-enable>false</annotation-enable>
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -307,87 +365,62 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RentCarApp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RentCarApp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>JavaFX</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="2" />
+    <option name="width" value="1910" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -395,7 +428,16 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -404,7 +446,7 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -413,7 +455,7 @@
               <item name="converter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -422,7 +464,26 @@
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -431,7 +492,7 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -440,7 +501,7 @@
               <item name="security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -449,55 +510,31 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
-            </path>
-            <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -505,7 +542,16 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SpringMVCHibernateManyToManyCRUDExample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -513,38 +559,37 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RentCarApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RentCarApp" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/workspace.xml" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="d5dcbbd9-d084-4fb8-b247-ffe7d5540c63" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553282336372" />
+    <property name="last.edited.regexp" value="2009" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src\main\webapp\static" />
-      <recent name="C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src\main\resources" />
-      <recent name="C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src\main\resources\i18n" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.rentcar.app.model" />
-      <recent name="" />
-      <recent name="com." />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rentcar.app.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\Arek\Desktop\RentCarApp\RentCarApp\src\main\resources\i18n" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -560,7 +605,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.1" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="SchemaGeneratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rentcar.app.SchemaGeneratorDemo" />
+      <module name="RentCarApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rentcar.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <deployment>
         <artifact name="RentCarApp:war exploded">
           <settings>
@@ -569,16 +628,15 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_SpringMVCHibernateManyToManyCRUDExample_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_RentCarApp" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61861" />
+        <option name="DEBUG_PORT" value="40703" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -625,1004 +683,511 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
+      <method v="2">
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="RentCarApp:war exploded" />
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+    <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="DOC_BASE" value="$PROJECT_DIR$/src" />
+      <option name="CONTEXT_PATH" value="/RentCarApp" />
+      <option name="TOMCAT_PORT" value="8080" />
+      <option name="AJP_PORT" value="8009" />
+      <option name="ADMIN_PORT" value="8005" />
+      <option name="VM_OPTIONS" value="" />
+      <option name="PASS_PARENT_ENV_OPTIONS" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="SpringMVCHibernateManyToManyCRUDExample" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="Application.SchemaGeneratorDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SchemaGeneratorDemo" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="00d82abc-b6f2-4f2d-8022-ec8d4744d9cf" name="Default" comment="" />
-      <changelist id="5950687f-0adf-41e1-8fe8-075851606989" name="Inne" comment="" />
-      <created>1519814191367</created>
+      <changelist id="ab7e1b9e-109e-407b-b568-c005538766ff" name="Default Changelist" comment="" />
+      <created>1552499517410</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1519814191367</updated>
-      <workItem from="1519814193083" duration="16969000" />
-      <workItem from="1519842547135" duration="3114000" />
-      <workItem from="1519905739673" duration="12929000" />
-      <workItem from="1519933518569" duration="5623000" />
-      <workItem from="1519940261232" duration="1600000" />
-      <workItem from="1520004674347" duration="9615000" />
-      <workItem from="1520071230731" duration="20859000" />
-      <workItem from="1520183147583" duration="611000" />
-      <workItem from="1520186465471" duration="5861000" />
-      <workItem from="1520248919277" duration="4343000" />
-      <workItem from="1520281051259" duration="225000" />
-      <workItem from="1520425050725" duration="13265000" />
-      <workItem from="1520621718247" duration="13796000" />
-      <workItem from="1520671353202" duration="25629000" />
-      <workItem from="1520769048367" duration="15598000" />
-      <workItem from="1520844848788" duration="7293000" />
-      <workItem from="1520860896178" duration="4064000" />
-      <workItem from="1520873113935" duration="7253000" />
-      <workItem from="1521020045922" duration="21608000" />
-      <workItem from="1521113084424" duration="579000" />
-      <workItem from="1521212092716" duration="9130000" />
-      <workItem from="1521225528224" duration="919000" />
+      <updated>1552499517410</updated>
+      <workItem from="1552499522190" duration="451000" />
+      <workItem from="1552499998294" duration="249000" />
+      <workItem from="1552500282298" duration="10225000" />
+      <workItem from="1552668491152" duration="12056000" />
+      <workItem from="1552733322972" duration="1204000" />
+      <workItem from="1552735404835" duration="5066000" />
+      <workItem from="1552815090158" duration="2483000" />
+      <workItem from="1552818719516" duration="5295000" />
+      <workItem from="1552838303681" duration="2582000" />
+      <workItem from="1552846039233" duration="4479000" />
+      <workItem from="1552918641629" duration="5570000" />
+      <workItem from="1552925872200" duration="2021000" />
+      <workItem from="1553194953848" duration="2455000" />
+      <workItem from="1553246499877" duration="2326000" />
+      <workItem from="1553250054454" duration="720000" />
+      <workItem from="1553267717473" duration="2864000" />
+      <workItem from="1553274611262" duration="5814000" />
+      <workItem from="1553283265214" duration="9084000" />
+      <workItem from="1554626166551" duration="1909000" />
+      <workItem from="1554732436356" duration="985000" />
+      <workItem from="1554734048403" duration="1391000" />
     </task>
-    <task id="LOCAL-00001" summary="Dodanie języka angielskiego do strony logowania">
-      <created>1519819524734</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1519819524734</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Dodanie 'properties'">
-      <created>1519819657454</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1519819657454</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Dodanie języka angielskiego i polskiego do stron">
-      <created>1519830893785</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1519830893785</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Refaktoring">
-      <created>1519834650652</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1519834650652</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Dodanie nowych widoków oraz zmiany w zabezpieczeniach w SecurityConfiguration">
-      <created>1519921328512</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1519921328512</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Utworzenie widoków (cars, homepage, userpage)">
-      <created>1519921965156</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1519921965156</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Wyodrębnienie funkcjonalności do poszczególnych kontrolerów">
-      <created>1519935159793</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1519935159793</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Refactor">
-      <created>1520008192647</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1520008192647</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Dodanie template strony">
-      <created>1520085799294</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1520085799295</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Zmiana w widokach strony">
-      <created>1520104230321</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1520104230321</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Dodanie wyszukiwarki uzytkownikow">
-      <created>1520443468537</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1520443468537</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Przeniesienie sekcji dodaj uzytkownika do widoku searchuser.jsp">
-      <created>1520711770933</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1520711770933</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Zmiana nazw tabel w bazie danych">
-      <created>1520711865765</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1520711865765</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Dodanie modelow Car i CarType">
-      <created>1520714427863</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714427863</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Stworzenie DAO Car i CarType">
-      <created>1520714463946</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714463946</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Stworzenie serwisu - CarService">
-      <created>1520714501351</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714501351</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Dodanie CarController">
-      <created>1520714551501</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714551501</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Stworzenie konwertera nazwy samochodu na CarType">
-      <created>1520714773083</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714773083</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Utowrzenie widoku tworzenia auta">
-      <created>1520714811382</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1520714811382</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Dodanie zabezpieczenia przy usuwaniu samochodow">
-      <created>1520716729818</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1520716729818</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Dodanie rezerwacji auta">
-      <created>1520882525810</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1520882525810</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Usuniecie zbednego kodu">
-      <created>1520882580834</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1520882580834</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Dodanie mozliwosci wynajmowania samochodu przez dealera oraz przy tworzeniu auta jest przypisywane do dealera">
-      <created>1520885028824</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1520885028824</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Dodanie modelu bazy danych w postaci sql.">
-      <created>1520885522404</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1520885522404</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Dodanie zabezpieczen na stronie 'rent-car'">
-      <created>1521025414266</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1521025414266</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Zmiana widoku 'cars'">
-      <created>1521033877814</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1521033877814</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Dodanie do modelu 'Car' pola users">
-      <created>1521033923670</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1521033923670</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Dodanie widoku 'yourcars' dla roli DEALER">
-      <created>1521039862237</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1521039862237</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Dodanie widokow 'yourcars' oraz 'rentcar'">
-      <created>1521039939190</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1521039939190</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Poprawienie zwracanych obiektow do widoku 'yourcars'">
-      <created>1521040924144</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1521040924144</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Dodanie widoku 'userpanel'">
-      <created>1521047598405</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1521047598405</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Stworzenie widoku 'userpanel'">
-      <created>1521047652779</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1521047652779</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Dodanie do tabeli pola picture">
-      <created>1521048603667</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1521048603667</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Stworzenie wyszukiwarki do samochodow + config do wyswietlania zdjecia uzytkownika">
-      <created>1521215318481</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1521215318481</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Usuniecie zbednych plikow">
-      <created>1521222610317</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1521222610317</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Poprawka zwiazana z wyswietleniem wypozyczonych aut w 'userpanel'">
-      <created>1521224709994</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1521224709994</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Poprawka zwiazana z wyswietleniem wypozyczonych aut w 'userpanel'">
-      <created>1521225133889</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1521225133889</updated>
-    </task>
-    <task id="LOCAL-00038" summary="DOdanie do pom.xml biblioteki commons">
-      <created>1521225228178</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1521225228178</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Refaktor widoku 'userpanel'">
-      <created>1521226212171</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1521226212171</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Usuniecie zbednych plikow">
-      <created>1521226282931</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1521226282931</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200883000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="79229000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="2" width="1910" height="1051" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40978262" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.49253732" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40978262" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.282516" sideWeight="0.5235008" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30810234" sideWeight="0.4764992" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742489" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.42548597" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49893278" weight="0.375" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32938644" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.39978448" />
+      <window_info anchor="bottom" id="Spring" order="11" weight="0.3297414" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3297414" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3297414" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3297414" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32939914" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40978262" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40978262" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.282516" sideWeight="0.5235008" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29850745" sideWeight="0.4764992" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="com.poratu.idea.plugins.tomcat" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dodanie modelow Car i CarType" />
-    <MESSAGE value="Stworzenie DAO Car i CarType" />
-    <MESSAGE value="Stworzenie serwisu - CarService" />
-    <MESSAGE value="Dodanie CarController" />
-    <MESSAGE value="Stworzenie konwertera nazwy samochodu na CarType" />
-    <MESSAGE value="Utowrzenie widoku tworzenia auta" />
-    <MESSAGE value="Dodanie zabezpieczenia przy usuwaniu samochodow" />
-    <MESSAGE value="Dodanie rezerwacji auta" />
-    <MESSAGE value="Usuniecie zbednego kodu" />
-    <MESSAGE value="Dodanie mozliwosci wynajmowania samochodu przez dealera oraz przy tworzeniu auta jest przypisywane do dealera" />
-    <MESSAGE value="Dodanie modelu bazy danych w postaci sql." />
-    <MESSAGE value="Dodanie zabezpieczen na stronie 'rent-car'" />
-    <MESSAGE value="Zmiana widoku 'cars'" />
-    <MESSAGE value="Dodanie do modelu 'Car' pola users" />
-    <MESSAGE value="Dodanie widoku 'yourcars' dla roli DEALER" />
-    <MESSAGE value="Dodanie widokow 'yourcars' oraz 'rentcar'" />
-    <MESSAGE value="Poprawienie zwracanych obiektow do widoku 'yourcars'" />
-    <MESSAGE value="Dodanie widoku 'userpanel'" />
-    <MESSAGE value="Stworzenie widoku 'userpanel'" />
-    <MESSAGE value="Dodanie do tabeli pola picture" />
-    <MESSAGE value="Stworzenie wyszukiwarki do samochodow + config do wyswietlania zdjecia uzytkownika" />
-    <MESSAGE value="Poprawka zwiazana z wyswietleniem wypozyczonych aut w 'userpanel'" />
-    <MESSAGE value="DOdanie do pom.xml biblioteki commons" />
-    <MESSAGE value="Refaktor widoku 'userpanel'" />
-    <MESSAGE value="Usuniecie zbednych plikow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Usuniecie zbednych plikow" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="15" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/CaptchaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/util/RecaptchaUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/AdvisedSupport.class">
+    <entry file="file://$PROJECT_DIR$/../../HousingAssociation/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/img/en.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="357" column="0" lean-forward="false" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+        <state>
+          <caret selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/PersistentLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userpanel.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="795">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.0.4.RELEASE/spring-security-web-4.0.4.RELEASE.jar!/org/springframework/security/web/authentication/rememberme/PersistentTokenRepository.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.4.RELEASE/spring-security-web-5.1.4.RELEASE.jar!/org/springframework/security/web/authentication/rememberme/PersistentTokenRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/AbstractDao.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#755#756#0" expanded="false" />
-            <element signature="e#811#812#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/custom-scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/smoothscroll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="54" column="59" lean-forward="false" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registercar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15638">
-          <caret line="3027" column="19" lean-forward="true" selection-start-line="3027" selection-start-column="19" selection-end-line="3027" selection-end-column="19" />
-          <caret line="3028" column="20" lean-forward="true" selection-start-line="3028" selection-start-column="20" selection-end-line="3028" selection-end-column="20" />
-          <caret line="3029" column="20" lean-forward="true" selection-start-line="3029" selection-start-column="20" selection-end-line="3029" selection-end-column="20" />
-          <caret line="3030" column="38" lean-forward="true" selection-start-line="3030" selection-start-column="38" selection-end-line="3030" selection-end-column="38" />
-          <caret line="3031" column="14" lean-forward="true" selection-start-line="3031" selection-start-column="14" selection-end-line="3031" selection-end-column="14" />
-          <caret line="3032" column="28" lean-forward="true" selection-start-line="3032" selection-start-column="28" selection-end-line="3032" selection-end-column="28" />
-          <caret line="3033" column="24" lean-forward="true" selection-start-line="3033" selection-start-column="24" selection-end-line="3033" selection-end-column="24" />
-          <caret line="3034" column="1" lean-forward="true" selection-start-line="3034" selection-start-column="1" selection-end-line="3034" selection-end-column="1" />
-          <caret line="3035" column="20" lean-forward="true" selection-start-line="3035" selection-start-column="20" selection-end-line="3035" selection-end-column="20" />
-          <caret line="3036" column="20" lean-forward="true" selection-start-line="3036" selection-start-column="20" selection-end-line="3036" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/app.css">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.1.4.RELEASE/spring-orm-5.1.4.RELEASE.jar!/org/springframework/orm/hibernate5/LocalSessionFactoryBean.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityWebApplicationInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="e#2187#2188#0" expanded="false" />
-            <element signature="e#2215#2216#0" expanded="false" />
-            <element signature="e#2260#2261#0" expanded="false" />
-            <element signature="e#2294#2295#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#950#951#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state>
+          <caret selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authheader.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cars.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="22" column="111" lean-forward="false" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/PersistentLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1321">
-          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registrationsuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="42" column="60" lean-forward="true" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/yourcars.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="e#1022#1023#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="82" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rentcar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserProfileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="165">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/authentication/AuthenticationTrustResolver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CaptchaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/CarType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/CarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="57" column="44" lean-forward="true" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/exception/UserNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/CarServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userslist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/CarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserProfileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/HibernateConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/converter/RoleToUserProfileConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locals.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/CarDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <marker date="1521224746556" expanded="true" signature="3550:3559" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        <state relative-caret-position="585">
+          <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <marker date="1521224746556" expanded="true" signature="811:812" ph="@{...}" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1956#1957#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="88" column="103" selection-start-line="88" selection-start-column="94" selection-end-line="88" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="1125">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/AppController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cars.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_pl.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="23" lean-forward="false" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="235" column="94" lean-forward="true" selection-start-line="235" selection-start-column="94" selection-end-line="235" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchuser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchcars.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/configuration/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="315">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="e#4433#4434#0" expanded="true" />
-            <element signature="e#4497#4498#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/model/UserProfileType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userpanel.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authheader.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="114" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rentcar/app/security/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="54" column="64" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="64" />
+          <folding>
+            <element signature="e#3430#3431#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -1639,7 +1204,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1662,7 +1227,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1687,7 +1252,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

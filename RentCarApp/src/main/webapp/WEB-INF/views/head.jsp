@@ -26,6 +26,7 @@
     <!--[if lt IE 9]>
     <script src="/static/js/html5shiv.js"></script>
     <script src="/static/js/respond.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
 

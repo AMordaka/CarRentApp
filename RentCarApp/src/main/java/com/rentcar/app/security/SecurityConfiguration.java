@@ -3,6 +3,7 @@ package com.rentcar.app.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
@@ -19,6 +20,7 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 
 @Configuration
 @EnableWebSecurity
+
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -70,12 +72,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		return authenticationProvider;
 	}
 
-	@Bean
-	public PersistentTokenBasedRememberMeServices getPersistentTokenBasedRememberMeServices() {
-		PersistentTokenBasedRememberMeServices tokenBasedservice = new PersistentTokenBasedRememberMeServices(
-				"remember-me", userDetailsService, tokenRepository);
-		return tokenBasedservice;
-	}
 
 	@Bean
 	public AuthenticationTrustResolver getAuthenticationTrustResolver() {

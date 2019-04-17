@@ -1,4 +1,5 @@
 <%@include file="head.jsp" %>
+
 <body id="home">
 <%@include file="authheader.jsp" %>
 <div class="lang">
@@ -15,8 +16,8 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="carType"><spring:message code="model"/></label>
                     <div class="col-md-7">
-                        <form:select path = "carType">
-                            <form:options items = "${carTypes}" itemValue="id"/>
+                        <form:select id="selectedCars" path = "carType">
+                            <form:options items = "${carTypes}" itemValue="id" onclick="refr"/>
                         </form:select>
                         <div class="has-error">
                             <form:errors path="carType" class="help-inline"/>

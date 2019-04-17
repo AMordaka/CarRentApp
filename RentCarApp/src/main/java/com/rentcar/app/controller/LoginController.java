@@ -16,6 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/")
 public class LoginController {
 
+    private static final String LOGIN = "login";
+    private static final String REDIRECT_HOMEPAGE = "redirect:/homepage";
+    private static final String REDIRECT_HOMEPAGE_LOGOUT = "redirect:/homepage?logout";
+
+    //SERVICES
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
@@ -25,21 +30,19 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
         if (isCurrentAuthenticationAnonymous()) {
-            return "login";
-        } else {
-            return "redirect:/homepage";
+            return LOGIN;
         }
+        return REDIRECT_HOMEPAGE;
     }
 
-    @RequestMapping(value="/logout", method = RequestMethod.GET)
-    public String logoutPage (HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
-            //new SecurityContextLogoutHandler().logout(request, response, auth);
+        if (auth != null) {
             persistentTokenBasedRememberMeServices.logout(request, response, auth);
             SecurityContextHolder.getContext().setAuthentication(null);
         }
-        return "redirect:/homepage?logout";
+        return REDIRECT_HOMEPAGE_LOGOUT;
     }
 
     private boolean isCurrentAuthenticationAnonymous() {

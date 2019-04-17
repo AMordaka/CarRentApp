@@ -16,4 +16,6 @@ public interface CarDao {
 
     List<Car> findAllUsers();
 
+    boolean checkIfNotExists(String regNo);
+
 }
